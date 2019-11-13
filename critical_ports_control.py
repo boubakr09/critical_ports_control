@@ -46,6 +46,7 @@ for i in response4['SecurityGroups']:
                 tag = (i['Tags'][0]['Value'])
                 groupid = (i['GroupId'])
                 message = (groupid + ' Security Group which tag name is ' + tag + ' has inbound rule open to internet on port: ' + str(ports))
+                #publish a message send via email to subscribers
                 response5 = sns.publish(
                     TopicArn = topicarn,
                     Message = message,
