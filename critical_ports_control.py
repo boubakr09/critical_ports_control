@@ -38,7 +38,7 @@ for i in response4['SecurityGroups']:
         #get the port
         ports = (i['IpPermissions'][0]['ToPort'])
         #verify if the port is one of those ports (ssh, rdp, mysql, ms sql, postgresql, oracle, redshift)
-        if ports == 22 or ports == 3389 or ports == 3306 or ports == 1433 or ports == 5432 or ports == 1521 or ports == 5439:
+        if ports in [22,3389,3306,1433,5432,1521,5439]:
             #get the ip range
             cidrRange = (i['IpPermissions'][0]['IpRanges'][0]['CidrIp'])
             #verify if the ip range is '0.0.0.0/0'
