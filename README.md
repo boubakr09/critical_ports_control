@@ -7,7 +7,7 @@ To prevent this happening in your infrastructure, you can put in place a python 
 
 Use the [critical_port_control.py](https://github.com/boubakr09/critical_ports_control/blob/master/critical_ports_control.py) script to test it in your environment.
 
-Run the command bellow:
+Run the bellow command:
 
 ```
 python3 critical_ports_control.py
